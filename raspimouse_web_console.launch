@@ -3,4 +3,5 @@
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
      <arg name="port" value="8080"/>
   </include>
+  <include file="$(find raspimouse_ros)/raspimouse.launch" /> 
 </launch>
