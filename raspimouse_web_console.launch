@@ -1,7 +1,8 @@
 <launch>
-  <node pkg="raspimouse_web_console" name="webserver" type="webserver.py" required="true" args="8000" />
-  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+  <node pkg="raspimouse_web_console" name="webserver" type="webserver.py" required="true" args="8080" />
+  <node pkg="raspimouse_web_console" name="receiver" type="receiver.py" required="true" output="screen" />
+<!--  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
      <arg name="port" value="8080"/>
-  </include>
+  </include> -->
   <include file="$(find raspimouse_ros)/raspimouse.launch" /> 
 </launch>
