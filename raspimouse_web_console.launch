@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="raspimouse_web_console" name="webserver" type="webserver.py" required="true" args="8080" />
+</launch>
